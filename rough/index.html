@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Products</a>
+        <a href="#">Watches</a>
+        <a href="#">Sale</a>
+        <a href="#">Blog</a>
+    </nav>
+
+    <section id="home" class="home-section">Home</section>
+    <section id="services" class="services-section">Services</section>
+    <section id="products" class="products-section">Products</section>
+    <section id="watches" class="watches-section">Watches</section>
+    <section id="sale" class="sale-section">Sale</section>
+    <section id="blog" class="blog-section">Blog</section>
+
+    <!-- BANNER SECTION -->
+    <section class="banner">
+        <!-- BANNER CONTENT -->
+        <div class="banner-content">
+            <h4>YOUR PRODUCTS <br> ARE GREATH.</h4>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <!-- BANNER IMAGE -->
+        <img src="https://themewagon.github.io/MiniStore/images/banner-image.png" alt="banner image" class="banner-img">
+
+    </section>
+
+    <h1 id="typewriter"></h1>
+
+   <div class="products-cards">
+
+    <div class="card-container">
+        <div class="image-wrapper">
+            <img src="https://themewagon.github.io/MiniStore/images/product-item1.jpg" alt="">
+            <div class="overlay">
+                <button class="add-to-cart">
+                    ADD TO CART <i class="fa fa-cart-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="image-content">
+            <h3><a href="#">IPHONE 10</a></h3>
+            <span>$980</span>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="image-wrapper">
+            <img src="https://themewagon.github.io/MiniStore/images/product-item1.jpg" alt="">
+            <div class="overlay">
+                <button class="add-to-cart">
+                    ADD TO CART <i class="fa fa-cart-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="image-content">
+            <h3><a href="#">IPHONE 10</a></h3>
+            <span>$980</span>
+        </div>
+    </div>
+
+</div>
+ 
+
+
+
+
+    <script>
+
+        // const links = document.querySelectorAll('.navbar a');
+        // const sections = document.querySelectorAll('.page-section');
+
+        // window.addEventListener('scroll', () => {
+        //   let current = '';
+
+        //   sections.forEach(section => {
+        //     const sectionTop = section.offsetTop - 100;
+        //     if (scrollY >= sectionTop) {
+        //       current = section.getAttribute('id');
+        //     }
+        //   });
+
+        //   links.forEach(link => {
+        //     link.classList.remove('active');
+        //     if (link.getAttribute('href') === `#${current}`) {
+        //       link.classList.add('active');
+        //     }
+        //   });
+        // });
+
+
+
+
+
+        const text = "YOUR PRODUCTS\nARE GREAT.";
+        const el = document.getElementById("typewriter");
+
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                el.textContent += text[index];
+                index++;
+                setTimeout(typeWriter, 500);
+            }
+        }
+
+        typeWriter();
+
+
+    </script>
+</body>
+
+</html>
