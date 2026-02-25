@@ -1,4 +1,4 @@
- const menuBtn = document.getElementById("menu-btn");
+const menuBtn = document.getElementById("menu-btn");
   const menu = document.getElementById("menu");
 
   menuBtn.addEventListener("click", () => {
@@ -33,3 +33,53 @@ window.addEventListener('scroll', () => {
 
 
 
+const searchBtn = document.getElementById("search-btn");
+const searchOverlay = document.getElementById("searchOverlay");
+
+searchBtn.addEventListener("click", () => {
+  searchOverlay.classList.add("active");
+  document.body.classList.add("no-scroll");
+});
+
+// Close when clicking outside
+searchOverlay.addEventListener("click", (e) => {
+  if (e.target === searchOverlay) {
+    closeSearch();
+  }
+});
+
+// Close on ESC
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeSearch();
+  }
+});
+
+function closeSearch() {
+  searchOverlay.classList.remove("active");
+  document.body.classList.remove("no-scroll");
+}
+
+
+
+const userBtn = document.getElementById("user-btn");
+const userPanel = document.getElementById("userPanel");
+const closeUser = document.getElementById("closeUser");
+
+userBtn.addEventListener("click", () => {
+  userPanel.classList.add("active");
+  document.body.classList.add("no-scroll");
+});
+
+closeUser.addEventListener("click", closeUserPanel);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeUserPanel();
+  }
+});
+
+function closeUserPanel() {
+  userPanel.classList.remove("active");
+  document.body.classList.remove("no-scroll");
+}
